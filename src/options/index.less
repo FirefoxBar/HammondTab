@@ -1,25 +1,159 @@
-.page-options {
-  .in-visible {
-    display: none;
+.btn-icon {
+  .iconfont {
+    margin-right: 0;
   }
+}
 
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
+.next-input-group {
+  .next-input {
     width: 100%;
-    z-index: 2;
   }
-  
-  .main-content {
-    padding: 60px 16px 16px 16px;
-    background-color: #eee;
-    min-height: 100vh;
+}
 
-    > section {
-      > .next-card {
-        margin-bottom: 16px;
+.page-options {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: stretch;
+
+  .sidebar {
+    width: 300px;
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    border-right: 1px solid #E6E7EB;
+
+    .next-tabs-nav {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: stretch;
+      align-items: stretch;
+
+      .next-tabs-tab {
+        flex-grow: 1;
+        text-align: center;
       }
+    }
+
+    .panel {
+      height: 100%;
+      flex-direction: column;
+      display: flex;
+
+      .panel-title {
+        height: 39px;
+        font-size: 14px;
+        text-align: center;
+        line-height: 39px;
+        background-color: #F7F8FA;
+        border-top: 1px solid #E6E7EB;
+        border-bottom: 1px solid #E6E7EB;
+      }
+
+      &.panel-title:first-child {
+        border-top: none;
+      }
+
+      .panel-content {
+        padding: 12px;
+        overflow: auto;
+      }
+    }
+
+    .panel.layout {
+      .layout-item {
+        margin-bottom: 12px;
+      }
+      .button-add,
+      .button-apply {
+        margin-bottom: 12px;
+        width: 100%;
+      }
+    }
+
+    .panel.extension {
+      .panel-content {
+        padding: 0;
+      }
+    }
+
+    .extension-list {
+      .item {
+        padding-left: 12px;
+        padding-right: 12px;
+
+        p {
+          margin-top: 2px;
+          margin-bottom: 2px;
+        }
+
+        .extra {
+          padding-top: 4px;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .panel.storage {
+      .local .next-btn {
+        margin-right: 12px;
+        width: calc(50% - 6px);
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      .next-select {
+        width: 100%;
+      }
+      .file-list {
+        padding-top: 12px;
+        .item {
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  .page-content {
+    background-image: url(http://pic1.win4000.com/wallpaper/b/55597435bb036.jpg);
+    background-size: cover;
+    overflow: auto;
+    width: calc(100% - 300px);
+
+    .layout {
+      width: 980px;
+      margin: 10px auto;
+  
+      .row {
+        display: grid;
+        grid-gap: 10px;
+        margin-bottom: 10px;
+  
+        .column {
+          background-color: #fff;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+
+.setting-dialog {
+  width: 600px;
+
+  .next-dialog-body {
+    padding: 0;
+
+    .next-tabs-content {
+      padding: 12px 20px;
     }
   }
 }

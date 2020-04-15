@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const entry = [
   { name: "options", html: true },
-  { name: "popup", html: true },
-  { name: "background", html: false },
+  // { name: "popup", html: true },
+  // { name: "background", html: false },
 ]
 
 module.exports = function(root, config) {
